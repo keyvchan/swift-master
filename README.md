@@ -21,8 +21,7 @@ Templates are used to create your local project and start your development. When
 
    ```
    REPO        	ID                       	VERSION  	TEMPLATES        	DESCRIPTION
-   dev.local   	swift-master             	0.1.0    	*simple          	Appsody runtime for Swift applications, using master branch
-   																			swift toolchain.
+   dev.local   	swift-master             	0.1.0    	*simple          	Appsody runtime for Swift applications, using master branch swift toolchain.
    ```
 
 3. Create a new folder in your local directory and initialize it using the Appsody CLI, e.g.:
