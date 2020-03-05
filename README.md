@@ -1,8 +1,8 @@
-# Swift Stack
+# swift-master stack
 
-The Swift stack is designed to provide a foundation for building and running Swift applications in Appsody.
+The swift-master stack is designed to provide a foundation for building and running Swift applications in Appsody.
 
-This stack is based on the `Swift 5.1` runtime and allows you to develop new or existing Swift applications using Appsody.
+This stack is based on the `Swift nightly-5.2-bionic` runtime and allows you to develop new or existing Swift applications using Appsody.
 
 ## Templates
 
@@ -10,30 +10,40 @@ Templates are used to create your local project and start your development. When
 
 ## Getting Started for a new Project
 
-1. Create a new folder in your local directory and initialize it using the Appsody CLI, e.g.:
+1. Clone this repo to your local machine, and package the stack yourself.
 
-    ```bash
-    mkdir my-project
-    cd my-project
-    appsody init swift
-    ```
-    This will initialize a Swift project using the default template.
+   ```bash
+   git clone https://github.com/keyvhcan/swift-master
+   appsody package
+   ```
 
-2. After your project has been initialized you can then run your application using the following command:
+2. After package the stack, use `appsody list` to verify there is a stack called `swift-master`
 
-    ```bash
-    appsody run
-    ```
+3. Create a new folder in your local directory and initialize it using the Appsody CLI, e.g.:
 
-    This launches a Docker container that continuously re-builds and re-runs your project. It also exposes port 8080, to allow you to bring your own web application and use it with this stack.
+   ```bash
+   mkdir my-project
+   cd my-project
+   appsody init dev.local/swift-master
+   ```
 
-    You can continue to edit the application in your preferred IDE (VSCode or other) and your changes will be reflected in the running container within a few seconds.
+   This will initialize a Swift project using the default template.
 
-3. You should see a message printed on the console:
+4. After your project has been initialized you can then run your application using the following command:
 
-    ```bash
-    Hello, world!
-    ```
+   ```bash
+   appsody run
+   ```
+
+   This launches a Docker container that continuously re-builds and re-runs your project. It also exposes port 8080, to allow you to bring your own web application and use it with this stack.
+
+   You can continue to edit the application in your preferred IDE (VSCode or other) and your changes will be reflected in the running container within a few seconds.
+
+5. You should see a message printed on the console:
+
+   ```bash
+   Hello, world!
+   ```
 
 **NOTE:** Currently the `appsody deploy` command only works for deploying web applications.
 
@@ -43,29 +53,31 @@ The Swift stack can be used with an existing server-side Swift project in order 
 
 You can enable an existing project as follows:
 
-1. Go to you project directory, e.g.:
+1. Follow [the package instruction above](#getting-started-for-a-new-project), verify the stack was available locally.
 
-    ```bash
-    cd my-project
-    ```
+2. Go to you project directory, e.g.:
 
-2. Initialize your Appsody project with the Swift stack, but without a template:
+   ```bash
+   cd my-project
+   ```
 
-    ```bash
-    appsody init swift --no-template
-    ```
+3. Initialize your Appsody project with the Swift stack, but without a template:
 
-3. After your project has been initialized you can then run your application using the following command:
+   ```bash
+   appsody init dev.local/swift-master --no-template
+   ```
 
-    ```bash
-    appsody run
-    ```
+4. After your project has been initialized you can then run your application using the following command:
 
-    This launches a Docker container that continuously re-builds and re-runs your project. It also exposes port 8080, to allow you to bring your own web application and use it with this stack.
+   ```bash
+   appsody run
+   ```
 
-    You can continue to edit the application in your preferred IDE (VSCode or other) and your changes will be reflected in the running container within a few seconds.
+   This launches a Docker container that continuously re-builds and re-runs your project. It also exposes port 8080, to allow you to bring your own web application and use it with this stack.
 
-3. You should see your application run, with logs written to the console.
+   You can continue to edit the application in your preferred IDE (VSCode or other) and your changes will be reflected in the running container within a few seconds.
+
+5. You should see your application run, with logs written to the console.
 
 ## License
 
