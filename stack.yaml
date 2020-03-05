@@ -1,0 +1,12 @@
+name: swift-master
+version: 0.1.0
+description: Appsody runtime for Swift applications, using master branch swift toolchain.
+license: Apache-2.0
+language: swift
+maintainers:
+  - name: Keyv Chan
+    email: keyvchan@gmail.com
+    github-id: keyvchan
+default-template: simple
+requirements:
+  appsody-version: ">= 0.2.7"
